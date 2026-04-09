@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'meeting_home_page.dart';
+import 'theme/app_theme.dart';
 
 class MeetingAssistantApp extends StatelessWidget {
   const MeetingAssistantApp({super.key});
@@ -10,20 +11,7 @@ class MeetingAssistantApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Meeting Assistant',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1565C0),
-          brightness: Brightness.light,
-        ),
-        useMaterial3: true,
-        visualDensity: VisualDensity.standard,
-        cardTheme: CardThemeData(
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-        ),
-      ),
+      theme: AppTheme.light(),
       home: const MeetingHomePage(),
     );
   }
